@@ -1,0 +1,23 @@
+//Programe una función recursiva que calcule la suma de un arreglo de números enteros.
+
+Algoritmo Ex7
+	definir vector, n, i, x, total Como Entero
+	x = 0
+	total = 0
+	escribir "Ingrese el largo del vector"
+	leer n
+	dimension vector(n)
+	para i = 0 hasta n - 1 con paso 1 Hacer
+		vector(i) = aleatorio(0,100)
+		escribir "Posicion ", i, " = ", vector(i)
+	FinPara
+	escribir "La suma de los elementos del vector es: ", suma(vector, n)
+FinAlgoritmo
+
+Funcion retorno <- suma(vector por referencia, n)
+	definir retorno Como Entero
+	
+	si n > 0 entonces
+		retorno = vector(n-1) + suma(vector, n-1)
+	FinSi
+Fin Funcion
